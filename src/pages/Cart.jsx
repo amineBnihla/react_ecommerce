@@ -1,3 +1,4 @@
+import { IoIosArrowDown,IoIosArrowUp  } from "react-icons/io";
 
 import Header from "../components/Header";
 
@@ -17,8 +18,12 @@ export default function Cart(){
              </div>
              </div>
              <div className="flex gap-10">
-             <div>
-                <input type="number" className="py-1 px-1 size-10 text-center text-colorPrimary border border-gray-400 rounded-md outline-none" min={1}/>
+             <div className="flex gap-3 ">
+                <input type="text"   className="py-1 px-1 size-10 text-center text-colorPrimary border border-gray-400 rounded-md outline-none" min={1}/>
+                <div className="flex flex-col">
+                  <button className=""><IoIosArrowUp size={20} className="text-gray-600" /></button>
+                  <button className=""><IoIosArrowDown size={20} className="text-gray-600" /></button>
+                </div>
              </div>
              <div className="flex flex-col justify-between">
                 <span className="font-bold text-2xl">$120</span>

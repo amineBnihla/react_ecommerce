@@ -33,7 +33,7 @@ export default function contextCartComponent({ children }) {
     }
   }
 
-  return <ContextCart.Provider value={{cart,handleCart,addToCart}}>
+  return <ContextCart.Provider value={{ cart,handleCart,addToCart}}>
     {children}
   </ContextCart.Provider>
 

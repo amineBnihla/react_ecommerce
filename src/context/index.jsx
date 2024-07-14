@@ -4,7 +4,7 @@ import { createContext, useState } from "react";
 
 export const ContextCart = createContext(null)
 
-export default function contextCartComponent({ children }) {
+export default function ContextCartComponent({ children }) {
 
   const [cart, setCart] = useState([])
   function addToCart(product) {
@@ -17,7 +17,7 @@ export default function contextCartComponent({ children }) {
           if(item.id == id){
             return {
               ...item,
-              quantite:quantite+1
+              quantite:item.quantite+1
             }
           }
      }))
@@ -26,7 +26,7 @@ export default function contextCartComponent({ children }) {
           if(item.id == id){
             return {
               ...item,
-              quantite:quantite-1
+              quantite:item.quantite-1
             }
           }
      }))

@@ -1,35 +1,24 @@
-import { IoIosArrowDown,IoIosArrowUp  } from "react-icons/io";
+
 
 import Header from "../components/Header";
+import { useContext } from "react";
+import { ContextCart } from "../context";
+import CartItem from "../components/CartItem";
+import LayoutWrapper from "../Layouts/Layout";
 
 export default function Cart(){
-
+const {cart} = useContext(ContextCart)
     return<>
-    <div>
-        <Header/>
+     <LayoutWrapper>
+
         <div className="my-40 flex flex-col container mx-auto">
-         <div className="p-5  flex justify-between">
-          <div className="flex">
-             <img src="https://picsum.photos/id/8/200/300" className="w-32 rounded-md object-contain mr-10" alt="" srcset="" />
-             <div className="w-[350px]">
-                <h1 className="text-black font-extrabold text-2xl">Lorem ipsum dolor sit amet.</h1>
-                <span className="block text-black mt-6">Clothes</span>
-                <p className="text-slate-500 text-xs mt-3 line-clamp-3 max-w-[250px]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui aliquam, ratione laudantium praesentium dolore pariatur!</p>        
-             </div>
-             </div>
-             <div className="flex gap-10">
-             <div className="flex gap-3 ">
-                <input type="text"   className="py-1 px-1 size-10 text-center text-colorPrimary border border-gray-400 rounded-md outline-none" min={1}/>
-                <div className="flex flex-col">
-                  <button className=""><IoIosArrowUp size={20} className="text-gray-600" /></button>
-                  <button className=""><IoIosArrowDown size={20} className="text-gray-600" /></button>
-                </div>
-             </div>
-             <div className="flex flex-col justify-between">
-                <span className="font-bold text-2xl">$120</span>
-                <button className="text-colorPrimary text-lg">Remove</button>
-             </div>
-          </div>
+         <div>
+             {
+             cart.map((item)=>{
+              return <CartItem key={item.id} product={item}/>
+             })
+
+             }
 
          </div>
          <div className="mt-8 px-5 border-t ">
@@ -51,7 +40,8 @@ export default function Cart(){
           <button className="bg-colorPrimary mt-10 font-semibold text-whiteColor py-4 rounded-full max-w-[200px] ">Checkout</button>
 
         </div>
-    </div>
+     </LayoutWrapper>
+
     
     
     </>

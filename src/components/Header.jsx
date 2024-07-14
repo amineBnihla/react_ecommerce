@@ -10,14 +10,14 @@ export default function Header(){
    const headElem = useRef(null)
    const location = useLocation()
      useEffect(()=>{
-     if(location.pathname == "/cart"){
+     if(location.pathname != "/"){
        headElem.current.style.backgroundColor = "#000"
      }
       // let headElem = document.querySelector('.elem_header')
        function checkScroll(){      
           const scroll = this.scrollY
           console.log(scroll)
-          if(scroll > 0 || location.pathname == "/cart"){
+          if(scroll > 0 || location.pathname != "/"){
           headElem.current.style.backgroundColor = "#000"
           }else{
   headElem.current.style.backgroundColor = "transparent"
@@ -42,7 +42,7 @@ window.addEventListener('scroll',checkScroll)
             <li className="text-white uppercase  font-medium">Men</li>
         </ul>
       </nav>
-      <img src="src/assets/logo.png" className="w-20 " alt="" srcset="" />
+      <img src="src/assets/logo.png" className="w-20 " alt=""  />
       <nav>
         <ul className="flex gap-7">
             <li className="text-white uppercase  font-medium">Contact us</li>

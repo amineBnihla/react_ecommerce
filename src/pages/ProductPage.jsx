@@ -4,8 +4,7 @@ import useFetch from "../hooks/useFetch"
 import LayoutWrapper from "../Layouts/Layout"
 import BuyNow from "../components/BuyNow"
 
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedinIn,FaFacebookF  } from "react-icons/fa";
+import { TiSocialFacebook,TiSocialLinkedin ,TiSocialInstagram  } from "react-icons/ti";
 
 
 export default function ProductPage(){
@@ -50,11 +49,19 @@ export default function ProductPage(){
          <div className="flex items-center gap-3 mt-5">
           <span className="text-gray-700">Share</span>
           <div className="flex space-x-2">
-           <FaFacebookF className="size-10" />
-           <FaLinkedinIn className="size-10" />
-           <FaInstagram  className="size-10"/>
+           <TiSocialFacebook className="size-5" />
+           <TiSocialLinkedin className="size-5" />
+           <TiSocialInstagram  className="size-5"/>
           </div>
          </div>
+            <div className="flex justify-between max-w-[400px]">
+               <span className="text-gray-700">We accept</span>
+               <div className="flex gap-3">
+                  <img src="/src/assets/logos_mastercard.png" className="aspect-square object-contain"/>
+                  <img src="/src/assets/logos_paypal.png" className="aspect-square object-contain"/>
+                  <img src="/src/assets/logos_visa.png" className="aspect-square object-contain"/>
+               </div>
+          </div>
         </div>
 
         

@@ -18,7 +18,7 @@ export default function CartItem({product}){
              <div className="flex gap-3 ">
                 <input type="text"   className="py-1 px-1 size-10 text-center text-colorPrimary border border-gray-400 rounded-md outline-none" min={1}/>
                 <div className="flex flex-col">
-                  <button className="" onClick={()=> handleCart("increment",product.id)}><IoIosArrowUp size={20} className="text-gray-600" /></button>
+                  <button className="" onClick={()=> handleCart("increment",product?.id)}><IoIosArrowUp size={20} className="text-gray-600" /></button>
                   <button className="" onClick={()=>handleCart("decrement",product?.id)}><IoIosArrowDown size={20} className="text-gray-600" /></button>
                 </div>
              </div>

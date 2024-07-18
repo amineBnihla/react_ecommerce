@@ -1,7 +1,8 @@
-import { useEffect, useRef } from "react"
+import { useContext, useEffect, useRef } from "react"
 
 import { LuShoppingCart } from "react-icons/lu";
 import { Link, useLocation } from "react-router-dom";
+import { ContextCart } from "../context";
 
 
 
@@ -9,6 +10,7 @@ import { Link, useLocation } from "react-router-dom";
 export default function Header(){
    const headElem = useRef(null)
    const location = useLocation()
+   const {cartLength} = useContext(ContextCart)
      useEffect(()=>{
      if(location.pathname != "/"){
        headElem.current.style.backgroundColor = "#000"
@@ -16,7 +18,7 @@ export default function Header(){
       // let headElem = document.querySelector('.elem_header')
        function checkScroll(){      
           const scroll = this.scrollY
-          console.log(scroll)
+
           if(scroll > 0 || location.pathname != "/"){
           headElem.current.style.backgroundColor = "#000"
           }else{
@@ -46,7 +48,7 @@ window.addEventListener('scroll',checkScroll)
       <nav>
         <ul className="flex gap-7">
             <li className="text-white uppercase  font-medium">Contact us</li>
-            <li className="text-white uppercase  font-medium"><Link to={'/cart'} className="relative"><LuShoppingCart  className="text-whiteColor" size={25}/><span className="absolute -right-2 -top-2 size-5 rounded-full grid place-items-center text-xs text-whiteColor bg-colorPrimary">2</span></Link></li>
+            <li className="text-white uppercase  font-medium"><Link to={'/cart'} className="relative"><LuShoppingCart  className="text-whiteColor" size={25}/><span className="absolute -right-2 -top-2 size-5 rounded-full grid place-items-center text-xs text-whiteColor bg-colorPrimary">{cartLength}</span></Link></li>
         </ul>
       </nav>
      </div>

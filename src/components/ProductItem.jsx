@@ -1,8 +1,9 @@
 
 import { RiArrowRightUpLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 
-export default function ProductItem({title,description,image,price}){
+export default function ProductItem({id,title,description,image,price}){
  
 
     return <>
@@ -15,7 +16,9 @@ export default function ProductItem({title,description,image,price}){
         </div>
         <h2 className="font-semibold text-lg">USD {price}</h2>
         </div>
+        <Link to={`/product/${id}`}>
         <RiArrowRightUpLine size={20} className="text-colorPrimary absolute right-3 bottom-3 "/>
+        </Link>
     </div>
     </>
 

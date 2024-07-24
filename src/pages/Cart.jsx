@@ -1,18 +1,17 @@
 
 
-import Header from "../components/Header";
 import { useContext } from "react";
 import { ContextCart } from "../context";
 import CartItem from "../components/CartItem";
 import LayoutWrapper from "../Layouts/Layout";
 
 export default function Cart(){
-const {cart} = useContext(ContextCart)
+const {cart,totalCart} = useContext(ContextCart)
     return<>
      <LayoutWrapper>
 
-        <div className="my-40 flex flex-col container mx-auto">
-         <div>
+        <div className="my-40  flex flex-col gap-5 container mx-auto">
+         <div className="space-y-4">
              {
              cart.map((item)=>{
               return <CartItem key={item.id} product={item}/>
@@ -24,7 +23,7 @@ const {cart} = useContext(ContextCart)
          <div className="mt-8 px-5 border-t ">
             <div className="flex mb-5 justify-between w-full border-slate-300 pt-3">
              <span className="text-slate-600 text-lg uppercase">Subtotal :</span>
-             <span className="text-lg font-semibold">$250</span>
+             <span className="text-lg font-semibold">${totalCart}</span>
             </div>
             <div className="flex justify-between w-full">
              <span className="text-slate-600 text-lg uppercase">Shipping :</span>

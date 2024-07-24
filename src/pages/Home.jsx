@@ -32,7 +32,7 @@ export default function Home(){
  <LayoutWrapper>
 
         <section className=" h-screen w-full">
-        <div className="absolute w-full h-full top-0 left-0 bg-[url('src/assets/store_shop.jpg')] bg-cover  brightness-[20%]"></div>
+        <div className="absolute w-full h-full top-0 left-0 bg-[url('/src/assets/store_shop.jpg')] bg-cover  brightness-[20%]"></div>
     <div className="container mx-auto h-full relative ">
        <h1 className="text-white text-9xl  font-bold absolute left-0 top-1/2 tracking-wider -translate-y-1/2 whitespace-pre">
         Explore <br/>
@@ -76,13 +76,13 @@ export default function Home(){
             <div className="grid gap-6 grid-cols-3 grid-rows-2">
              <div className="relative col-span-2 row-span-2 rounded-md bg-gray_dark">
                <h1 className="text-9xl font-black text-white text-opacity-15">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore.</h1>
-               <img src="src/assets/fashionist.png" className="absolute w-[450px] bottom-0 left-1/2 -translate-x-1/2" alt="" srcset="" />
+               <img src="src/assets/fashionist.png" className="absolute w-[450px] bottom-0 left-1/2 -translate-x-1/2" alt=""  />
              </div>
              <div className="relative col-span-1  row-span-1 rounded-md px-3 py-5 text-black bg-gray_dark">
             <h1 className="font-bold text-5xl text-whiteColor uppercase leading-tight">  Explore Our <span className="text-colorPrimary block">Generius Offers</span> today!</h1>
               </div>
              <div className="relative col-span-1 row-span-1 rounded-md bg-gray_dark">
-             <img src="src/assets/female-fashionista.png" className="absolute w-[350px] bottom-0 left-1/2 -translate-x-1/2" alt="" srcset="" />
+             <img src="src/assets/female-fashionista.png" className="absolute w-[350px] bottom-0 left-1/2 -translate-x-1/2" alt=""  />
 
              </div>
             </div>
@@ -109,7 +109,7 @@ export default function Home(){
 
         </section>
         <section className="bg-colorPrimary py-20 relative">
-          <img src="src/assets/logo_black.png" className="absolute top-1/2 -translate-y-1/2 right-1/4 w-[410px] opacity-50" alt="" srcset="" />
+          <img src="src/assets/logo_black.png" className="absolute top-1/2 -translate-y-1/2 right-1/4 w-[410px] opacity-50" alt=""  />
           <div className="container mx-auto flex flex-col gap-5">
           <h1 className="text-4xl font-bold uppercase text-white mb-10">JOIN NOW,<br/>Subscribe</h1>
            <input type="text"  className="bg-whiteColor rounded-md max-w-[400px] py-3 px-5 outline-none border-none placeholder:text-gray-500" name="" id="" placeholder="E-mail" />

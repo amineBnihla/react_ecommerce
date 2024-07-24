@@ -10,8 +10,7 @@ import { IoIosArrowForward } from "react-icons/io";
 export default function ProductPage(){
   
     const param = useParams()
-    const {data,loading,error} = useFetch(`https://fakestoreapi.com/products/${param.id}`)
-   console.log(data)
+    const {data,loading} = useFetch(`https://fakestoreapi.com/products/${param.id}`)
     return <>
     <LayoutWrapper>
    <div className="my-40 container mx-auto">
@@ -22,12 +21,12 @@ export default function ProductPage(){
         :
   <div className=" flex flex-col md:flex-row gap-10  w-full">
         <div className="w-full md:w-1/2 px-5">
-             <img src={data?.image} className="w-full object-cover aspect-square rounded-md" alt="" srcset="" />
+             <img src={data?.image} className="w-full object-contain aspect-square rounded-md" alt=""  />
              <div className="flex gap-x-3 mt-4">
-               <img src="https://picsum.photos/id/4/200/300" className="size-10 rounded-sm aspect-square object-cover" alt="" srcset="" />
-               <img src="https://picsum.photos/id/6/200/300" className="size-10 rounded-sm aspect-square object-cover" alt="" srcset="" />
-               <img src="https://picsum.photos/id/7/200/300" className="size-10 rounded-sm aspect-square object-cover" alt="" srcset="" />
-               <img src="https://picsum.photos/id/8/200/300" className="size-10 rounded-sm aspect-square object-cover" alt="" srcset="" />
+               <img src="https://picsum.photos/id/4/200/300" className="size-10 rounded-sm aspect-square object-cover" alt=""  />
+               <img src="https://picsum.photos/id/6/200/300" className="size-10 rounded-sm aspect-square object-cover" alt=""  />
+               <img src="https://picsum.photos/id/7/200/300" className="size-10 rounded-sm aspect-square object-cover" alt=""  />
+               <img src="https://picsum.photos/id/8/200/300" className="size-10 rounded-sm aspect-square object-cover" alt=""  />
              </div>
         </div>
         <div className="w-full space-y-3 px-5  md:w-1/2 ">
@@ -46,7 +45,7 @@ export default function ProductPage(){
             <h2 className="text-base font-medium text-gray-700 max-w-[400px]">{data?.category}</h2>
             <p className="text-sm text-gray-700 max-w-[400px]">{data?.description}</p>
           {/* Buy and checkout action */}
-         <BuyNow/>
+         <BuyNow product={data}/>
           {/* Buy and checkout action */}
          <div className="flex items-center gap-3 mt-5">
           <span className="text-gray-700">Share</span>

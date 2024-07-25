@@ -1,31 +1,32 @@
-import { useEffect, useState } from "react";
 import ProductItem from "../components/ProductItem";
 
 
 import LayoutWrapper from "../Layouts/Layout";
+import useFetch from "../hooks/useFetch";
+import Loading from "../components/Loading";
 
 
 
 export default function Home(){
-  const [products,setProducts] = useState([])
 
-    useEffect(()=>{
+   const {data,loading} = useFetch('https://fakestoreapi.com/products?limit=6')
+    // useEffect(()=>{
      
-         async function getProducts(){
+    //      async function getProducts(){
          
-            try {
-              const res =await  fetch('https://fakestoreapi.com/products?limit=6')
-              const data = await res.json()
+    //         try {
+    //           const res =await  fetch('https://fakestoreapi.com/products?limit=6')
+    //           const data = await res.json()
           
-              setProducts(data)
-            } catch (error) {
-                console.log(error)
-            }
+    //           setProducts(data)
+    //         } catch (error) {
+    //             console.log(error)
+    //         }
              
-        }
+    //     }
 
-    getProducts()
-    },[])
+    // getProducts()
+    // },[])
 
 
     return <>
@@ -52,9 +53,12 @@ export default function Home(){
           <h2 className="text-xl font-semibold text-black uppercase">SHORT BY: <span className="text-gray-700">NEWEST +</span></h2>
             </div>
             <div className="flex gap-10 flex-wrap">
-
+                 
                 {
-                    products.map((pro)=>{
+                    loading ?
+                    <Loading number={6}/>
+                    :
+                    data.map((pro)=>{
                      
                         return   <ProductItem key={pro.id} {...pro}/>
                     })
@@ -94,8 +98,11 @@ export default function Home(){
 
             <div className="flex gap-10 flex-wrap">
 
-                {
-                    products.map((pro)=>{
+                { 
+                    loading ?
+                    <Loading number={6}/>
+                    :
+                    data.map((pro)=>{
                      
                         return   <ProductItem key={pro.id} {...pro}/>
                     })

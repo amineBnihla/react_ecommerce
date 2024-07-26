@@ -4,7 +4,7 @@ import { LuShoppingCart } from "react-icons/lu";
 import { Link, useLocation } from "react-router-dom";
 import { ContextCart } from "../context";
 import useFetch from "../hooks/useFetch";
-
+import { IoMenu } from "react-icons/io5";
 
 
 
@@ -38,14 +38,15 @@ window.addEventListener('scroll',checkScroll)
    
     return <>
     <header className="elem_header fixed top-0 left-0 w-screen h-20 z-50" ref={headElem}>
-     <div className="container h-full mx-auto flex justify-between items-center">
-        <Link to={'/'}>   <img src="/src/assets/logo.png" className="w-20 " alt=""  /></Link>  
-      <nav>
-        <ul className="flex items-center gap-7">
+     <div className="container relative h-full mx-auto flex justify-between items-center">
+        <Link to={'/'}>   <img src="/src/assets/logo.png" className="w-14 md:w-20" alt=""  /></Link>  
+        <button className="block lg:hidden"><IoMenu color="#FFF" size={30}/></button>
+      <nav className="absolute top-full lg:top-0 h-0 lg:h-auto overflow-hidden lg:w-auto w-full bg-black lg:bg-transparent lg:relative">
+        <ul className="flex items-center lg:gap-5 flex-col lg:flex-row">
 
           {
             data.map((cat)=>(     
-            <Link to={'/category/'+cat} key={cat}><li className="text-whiteColor uppercase text-xs " >{cat}</li></Link>  
+            <Link to={'/category/'+cat} key={cat}><li className="text-whiteColor uppercase block text-xs py-4  lg:py-0 " >{cat}</li></Link>  
             ) )
           }
         </ul>

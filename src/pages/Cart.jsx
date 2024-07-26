@@ -32,7 +32,7 @@ const {cart,totalCart} = useContext(ContextCart)
          </div>
          <div className="border-slate-300 flex justify-between pt-2 mt-5 px-5">
        <span className="text-black font-bold text-lg uppercase">Total :</span>
-             <span className="text-xl font-semibold uppercase">$250</span>
+             <span className="text-xl font-semibold uppercase">${totalCart}</span>
          </div>
 
 

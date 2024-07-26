@@ -35,12 +35,12 @@ export default function Home(){
         <section className=" h-screen w-full">
         <div className="absolute w-full h-full top-0 left-0 bg-[url('/src/assets/store_shop.jpg')] bg-cover  brightness-[20%]"></div>
     <div className="container mx-auto h-full relative ">
-       <h1 className="text-white text-9xl  font-bold absolute left-0 top-1/2 tracking-wider -translate-y-1/2 whitespace-pre">
+       <h1 className="text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl  font-bold absolute left-0 lg:top-1/2 top-1/3 tracking-wider -translate-y-1/2 whitespace-pre">
         Explore <br/>
         <span className="text-colorPrimary">Latest</span> <br/>
         Products
        </h1>
-       <h2 className="text-3xl w-[18ch]  absolute top-1/3   text-white font-semibold right-6 uppercase">
+       <h2 className="text-2xl  lg:text-3xl w-[18ch]  absolute  lg:top-1/3  top-2/3   text-white font-semibold right-6 uppercase">
         Shop Our <br/> New Arrivals collection and latest product
        </h2>
     </div>
@@ -49,8 +49,8 @@ export default function Home(){
             <div className="container  mx-auto">
 
             <div className=" flex w-full justify-between pb-10">
-          <h2 className="text-xl font-semibold text-black uppercase">FILTRER +</h2>
-          <h2 className="text-xl font-semibold text-black uppercase">SHORT BY: <span className="text-gray-700">NEWEST +</span></h2>
+          <h2 className="text-lg lg:text-xl font-semibold text-black uppercase">FILTRER +</h2>
+          <h2 className="text-lg lg:text-xl font-semibold text-black uppercase">SHORT BY: <span className="text-gray-700">NEWEST +</span></h2>
             </div>
             <div className="flex gap-10 flex-wrap">
                  
@@ -77,16 +77,16 @@ export default function Home(){
             <div className="flex justify-end">
         <h2 className="text-2xl font-bold my-10 max-w-[200px] text-black uppercase">Check Our Products</h2>
             </div>
-            <div className="grid gap-6 grid-cols-3 grid-rows-2">
-             <div className="relative col-span-2 row-span-2 rounded-md bg-gray_dark">
-               <h1 className="text-9xl font-black text-white text-opacity-15">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore.</h1>
-               <img src="src/assets/fashionist.png" className="absolute w-[450px] bottom-0 left-1/2 -translate-x-1/2" alt=""  />
+            <div className="grid gap-6 grid-cols-1 md:grid-cols-3 grid-rows-2 mdgrid-rows-3">
+             <div className="relative col-span-1 md:col-span-2 row-span-1 md:row-span-2 rounded-md bg-gray_dark">
+               <h1 className="text-9xl font-black text-white text-opacity-15 line-clamp-3 md:line-clamp-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore.</h1>
+               <img src="src/assets/fashionist.png" className="absolute w-[300px] md:w-[450px] bottom-0 left-1/2 -translate-x-1/2" alt=""  />
              </div>
              <div className="relative col-span-1  row-span-1 rounded-md px-3 py-5 text-black bg-gray_dark">
             <h1 className="font-bold text-5xl text-whiteColor uppercase leading-tight">  Explore Our <span className="text-colorPrimary block">Generius Offers</span> today!</h1>
               </div>
-             <div className="relative col-span-1 row-span-1 rounded-md bg-gray_dark">
-             <img src="src/assets/female-fashionista.png" className="absolute w-[350px] bottom-0 left-1/2 -translate-x-1/2" alt=""  />
+             <div className="relative hidden md:block col-span-1 row-span-1 rounded-md bg-gray_dark">
+             <img src="src/assets/female-fashionista.png" className="absolute w-[300px] bottom-0 left-1/2 -translate-x-1/2" alt=""  />
 
              </div>
             </div>

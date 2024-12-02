@@ -35,7 +35,7 @@ export default function Home(){
         <section className=" h-screen w-full">
         <div className="absolute w-full h-full top-0 left-0 bg-[url('/src/assets/store_shop.jpg')] bg-cover  brightness-[20%]"></div>
     <div className="container mx-auto h-full relative ">
-       <h1 className="text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl  font-bold absolute left-0 lg:top-1/2 top-1/3 tracking-wider -translate-y-1/2 whitespace-pre">
+       <h1 className="text-white text-6xl sm:text-7xl md:text-8xl lg:text-9xl  font-bold absolute left-4 md:left-0 lg:top-1/2 top-1/3 tracking-wider -translate-y-1/2 whitespace-pre">
         Explore <br/>
         <span className="text-colorPrimary">Latest</span> <br/>
         Products
@@ -116,11 +116,11 @@ export default function Home(){
 
         </section>
         <section className="bg-colorPrimary py-20 relative">
-          <img src="src/assets/logo_black.png" className="absolute top-1/2 -translate-y-1/2 right-1/4 w-[410px] opacity-50" alt=""  />
+          <img src="src/assets/logo_black.png" className="absolute top-1/2 -translate-y-1/2 right-1/4 w-[410px] hidden lg:block opacity-50" alt=""  />
           <div className="container mx-auto flex flex-col gap-5">
           <h1 className="text-4xl font-bold uppercase text-white mb-10">JOIN NOW,<br/>Subscribe</h1>
-           <input type="text"  className="bg-whiteColor rounded-md max-w-[400px] py-3 px-5 outline-none border-none placeholder:text-gray-500" name="" id="" placeholder="E-mail" />
-           <button className="py-3 px-4 rounded-full bg-whiteColor w-fit text-colorPrimary font-medium text-xl">Subscribe</button>
+           <input type="text"  className="bg-white rounded-md max-w-[400px] py-3 px-5 outline-none border-none placeholder:text-gray-500" name="" id="" placeholder="E-mail" />
+           <button className="py-3 px-4 rounded-full bg-black w-fit text-colorPrimary font-medium text-xl">Subscribe</button>
             </div>
         </section>
 

@@ -36,7 +36,7 @@ const {cart,totalCart} = useContext(ContextCart)
          </div>
 
 
-          <button className="bg-colorPrimary mt-10 font-semibold text-whiteColor py-4 rounded-full max-w-[200px] ">Checkout</button>
+          {/* <button className="bg-colorPrimary mt-10 font-semibold text-whiteColor py-4 rounded-full max-w-[200px] ">Checkout</button> */}
 
         </div>
      </LayoutWrapper>

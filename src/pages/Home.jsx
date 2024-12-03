@@ -80,13 +80,13 @@ export default function Home(){
             <div className="grid gap-6 grid-cols-1 md:grid-cols-3 grid-rows-2 mdgrid-rows-3">
              <div className="relative col-span-1 md:col-span-2 row-span-1 md:row-span-2 rounded-md bg-gray_dark">
                <h1 className="text-9xl font-black text-white text-opacity-15 line-clamp-3 md:line-clamp-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore.</h1>
-               <img src="src/assets/fashionist.png" className="absolute w-[300px] md:w-[450px] bottom-0 left-1/2 -translate-x-1/2" alt=""  />
+               <img src="../assets/fashionist.png" className="absolute w-[300px] md:w-[450px] bottom-0 left-1/2 -translate-x-1/2" alt=""  />
              </div>
              <div className="relative col-span-1  row-span-1 rounded-md px-3 py-5 text-black bg-gray_dark">
             <h1 className="font-bold text-5xl text-whiteColor uppercase leading-tight">  Explore Our <span className="text-colorPrimary block">Generius Offers</span> today!</h1>
               </div>
              <div className="relative hidden md:block col-span-1 row-span-1 rounded-md bg-gray_dark">
-             <img src="src/assets/female-fashionista.png" className="absolute w-[300px] bottom-0 left-1/2 -translate-x-1/2" alt=""  />
+             <img src="../assets/female-fashionista.png" className="absolute w-[300px] bottom-0 left-1/2 -translate-x-1/2" alt=""  />
 
              </div>
             </div>
@@ -116,7 +116,7 @@ export default function Home(){
 
         </section>
         <section className="bg-colorPrimary py-20 relative">
-          <img src="src/assets/logo_black.png" className="absolute top-1/2 -translate-y-1/2 right-1/4 w-[410px] hidden lg:block opacity-50" alt=""  />
+          <img src="../assets/logo_black.png" className="absolute top-1/2 -translate-y-1/2 right-1/4 w-[410px] hidden lg:block opacity-50" alt=""  />
           <div className="container mx-auto flex flex-col gap-5">
           <h1 className="text-4xl font-bold uppercase text-white mb-10">JOIN NOW,<br/>Subscribe</h1>
            <input type="text"  className="bg-white rounded-md max-w-[400px] py-3 px-5 outline-none border-none placeholder:text-gray-500" name="" id="" placeholder="E-mail" />

@@ -44,7 +44,7 @@ window.addEventListener('scroll',checkScroll)
     return <>
     <header className="elem_header fixed top-0 left-0 w-screen h-20 z-50" ref={headElem}>
      <div className="container relative h-full mx-auto flex justify-between items-center">
-        <Link to={'/'}>   <img src="/src/assets/logo.png" className="w-14 md:w-20" alt=""  /></Link>  
+        <Link to={'/'}>   <img src="../assets/logo.png" className="w-14 md:w-20" alt=""  /></Link>  
         <button className="block lg:hidden"><IoMenu color="#FFF" size={30} onClick={()=>setClosed(!closed)}/></button>
       <nav   className={"absolute left-0 top-full lg:top-0  overflow-hidden lg:w-auto w-full bg-black lg:bg-transparent lg:relative transition-[clip-path] duration-500 " + (closed ? ' [clip-path:polygon(0_0,100%_0,100%_0,0_0)] lg:h-auto lg:[clip-path:polygon(0_0,100%_0,100%_100%,0%_100%)]':'h-auto [clip-path:polygon(0_0,100%_0,100%_100%,0%_100%)]')}>
         <ul className="flex items-center lg:gap-5 flex-col lg:flex-row">
@@ -63,7 +63,6 @@ window.addEventListener('scroll',checkScroll)
    
       <nav>
         <ul className="flex gap-7">
-            <li className="text-white uppercase  font-medium">Contact us</li>
             <li className="text-white uppercase  font-medium"><Link to={'/cart'} className="relative"><LuShoppingCart  className="text-whiteColor" size={25}/><span className="absolute -right-2 -top-2 size-5 rounded-full grid place-items-center text-xs text-whiteColor bg-colorPrimary">{cartLength}</span></Link></li>
         </ul>
       </nav>
